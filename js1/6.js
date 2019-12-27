@@ -8,7 +8,16 @@
  */
 
 const solution = (a, i = 2) => {
-  return true
+  if(a === 1){
+    return false
+  }
+  if(i > (a / 2)){
+    return true
+  }
+  if(a % i){
+    return solution(a,i + 1)
+  }
+  return false
 }
 
 module.exports = {
