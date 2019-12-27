@@ -11,8 +11,14 @@
  * @returns {function}
  */
 
-const solution = (a, fun) => {
-  return () => { }
+const solution = (a, fun, i = 0) => {
+  return () => { 
+    if ( i === a ){
+      return null
+    }
+    i = i + 1
+    return fun()
+  }
 }
 
 module.exports = {
