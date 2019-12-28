@@ -14,10 +14,10 @@ const solution = (a, i = 2) => {
   if(i > (a / 2)){
     return true
   }
-  if(a % i){
-    return solution(a,i + 1)
+  if(a % i === 0){
+    return false
   }
-  return false
+  return solution(a,i + 1)
 }
 
 module.exports = {
