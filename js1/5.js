@@ -7,7 +7,12 @@
  * @returns null
  */
 
-const solution = (a, fun) => {
+const solution = (a, fun, i = 0) => {
+  if( i === a){
+    return null
+  }
+  fun()
+  return solution(a, fun, i + 1)
 }
 
 module.exports = {
